@@ -1,0 +1,62 @@
+<div class="authform">
+  
+    <% if @booking.new_record? %>
+    <% end %>
+  
+    <%= simple_form_for(@booking) do |f| %>
+
+    <div class="form-inputs">
+
+        <% if @booking.new_record? %>
+          <%= f.hidden_field :user_id, :value => current_user.id %>
+        <h3><%= t("New_Booking") %></h3> <br>
+        <% else %>
+          <h3><%= @booking.user.name %>'s <%= t("Booking") %></h3>
+        <% end %>
+      
+        <%#= f.input :order_datetime, discard_minute: :true, minute_step: 60, ampm: true %>
+      
+      <% if @booking.new_record? or @booking.Open? %>
+          <p><%= f.datetime_select :order_datetime, { discard_minute: true, minute_step: 60, ampm: true} %></p>
+          <%= f.input :hours, label: t("hours"), collection: [[4, '4:  $999'], [8, ' 8:  $1,899'], [12, '12: $2,799'] ], as: :radio_buttons, label_method: :last, value_method: :first%>
+        <% else %>
+          <p><strong><%= t('order_time') %>: </strong><%= @booking.order_datetime.strftime("%d/%m/%Y - %l:00 %p") %></p>
+          <Strong><%= t("duration") %>: <%= @booking.hours %> <%= t("hours") %></strong> <br><br>
+        <% end %>
+      
+      <%= f.input :hospital, collection: Booking.i18n_hospitals %>
+        <%= f.input :location %>
+
+        <% if current_user.admin? %>
+          <%= f.association :nurse, :as => :collection_select, collection: User.partner %>
+        <% end %>
+
+      <% if !@booking.contact_person %>
+        <% @booking.contact_person = current_user.name %>
+      <% end %>
+      <% if !@booking.contact_phone_no %>
+        <% @booking.contact_phone_no = current_user.phone_no %>
+      <% end %>
+        <%= f.input :contact_person %>
+        <%= f.input :contact_phone_no %>
+      
+      <%= f.input :preferred_language, collection: Booking.preferred_languages.keys  %>
+      
+        <% if @booking.new_record? %>
+      <%= f.hidden_field :status, value: :Open %>
+        <% else %>
+          <%#= f.input :status, collection: Booking.statuses.keys %>
+          <strong><%= t("status") %>: <%= @booking.status %></strong>
+        <% end %>  
+    </div>  
+  
+  <% if @booking.Matched? or @booking.Open? or @booking.new_record? %>
+      <br>
+      <div class="form-actions">
+        <%= f.button :submit %>
+      </div>
+  <% end %>
+  
+<% end %>
+
+</div>

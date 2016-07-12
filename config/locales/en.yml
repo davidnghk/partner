@@ -1,0 +1,371 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# To learn more, please read the Rails Internationalization guide
+# available at http://guides.rubyonrails.org/i18n.html.
+
+en:
+  app_title: "LetsNurse: HK Nurses Finder"
+  app_desc: "LetsNurse is an App which helps people finding private nursing services in Hong Kong. With our responsive framework, you can start search your private nursing services on your smartphone without any downloads which save you a lot troubles and security issues.  Or become a freelance nurse and start earning money on your won schedule. We pay a lot of attention to your privacy and security. You don't have worry about your credit card information as we do not store your credit card information in our servers by any means. Your information will be masked once the services completed."
+  preferred_language: "Preferred Language"
+  hello: "Hello world"
+  duration: "Duration"
+  hours: "Number of Hours"
+  home: "Home"
+  order: "Order"
+  order_list: "Order List"
+  new_order: "New Order"
+  Booking: "Booking"
+  List_Booking: "List Booking"
+  New_Booking: "New Booking"
+  about: "About"
+  edit_account: "Edit Account"
+  sign_out: "Sign Out"
+  sign_in: "Sign In"
+  sign_up: "Sign Up"
+  admin: "Admin"
+  users: "Users"
+  start_datetime: "Time"
+  no_of_hours: "Hours"
+  pickup: "Pickup Location"
+  dropff: "Dropoff Location"
+  trip_type: "Trip"
+  helper_class: "Helper Class"
+  total_fee: "Total Fee"
+  server: "Nurse"
+  status: "Status"
+  OneWay: "One Way"
+  RoundTrip: "Round Trip"
+  Helper: "Helper"
+  Nurse: "Nurse"
+  listing_booking: "Listing of Bookings"
+  new: "New"
+  partner_up: "To Join"
+  server_grade: "Grade"
+  location: "Location"
+  hospital: "Hospital"
+  contact_person: "Contact"
+  contact_phone_no: "Phone"
+  location_details: "Location Details"
+  fee: "Fee"
+  customer: "Customer"
+  order: "order"
+  booking_date: "Date"
+  booking_time: "Time"
+  pending: "Pending"
+  open: "Open"
+  rejected: "Rejected"
+  cancelled: "Cancelled"
+  confirmed: "Confirmed"
+  completed: "Completed"
+  nurse_rating: "Rating"
+  customer_rating: "Customer's Rating"
+  nurse_phone_no: "Phone No"
+  fill_to_change_password: "Leave these fields blank if you don't want to change your password."
+  password_to_change: "You must enter your current password to make changes."
+  booking_list: "Bookings"
+
+  customer: "Client"
+  order_time: "Time"
+  hours: "Hours"
+  hospital: "Hospital"
+  location: "Location"
+  cost: "Pay"
+  contact: "Contact"
+  phone_no: "Phone No"
+  nurse: "Nurse"
+  status: "Status"
+  payment: "Payment"
+  Paid: "Paid"
+  ot: "Outstanding "
+  
+  engage: "Engage"
+  cancel: "Cancel"
+  disangage: "Disengage"
+  reject: "Reject"
+  home: "Lets Nurse"
+  brand: "LetsNurse"
+  
+  註冊護士: "Registed Nurse"
+  登記護士: "Enrolled Nurse"  
+  
+  嘉諾撒醫院: "Canossa Hospital"
+  播道醫院: "Evangel Hospital"
+  香港港安醫院: "Hong Kong Adventist Hospital"
+  香港浸信會醫院: "Hong Kong Baptist Hospital"
+  養和醫院: "Hong Kong Sanatorium & Hospital"
+  明德國際醫院: "Matilda International Hospital"
+  寶血醫院: "Precious Blood Hospital"
+  聖保祿醫院: "St. Paul's Hospital"
+  聖德肋撒醫院: "St. Teresa's Hospital"
+  荃灣港安醫院: "Tsuen Wan Adventist Hospital"
+  仁安醫院:  "Union Hospital"
+
+  banks:
+    匯豐銀行: "HSBC"
+    恒生銀行: "Hang Seng Bank"
+    渣打銀行: "Standard Chartered Bank"
+    中國銀行: "Bank of China"
+    美國銀行: "Bank of America"
+    中國建設銀行: "China Construction Bank"
+    花旗銀行: "Citi Bank"
+    星展銀行: "DBS Hong Kong"
+
+  helpers:
+    select:
+      prompt: "Please choose"
+    submit:
+      create: "Create"
+      submit: "Submit"
+      update: "Update"
+  
+  activerecord:
+    errors:
+      models:
+        booking:
+          attributes:
+            hours:
+              blank: "No duration inputed"
+    attributes:
+      booking:
+        start_datetime: "Start Time"
+        location: "Location"
+        status: "Status"
+      user:
+        name: "Name"
+        email: "email"
+        
+  simple_form:
+    labels:
+      defaults:
+        username: 'User name'
+        password: 'Password'
+        order_datetime: 'Time'
+        hours: 'Hours'
+        hospital: "Hospital"
+        location: "Location"
+        contact_person: "Contact Person"
+        contact_phone_no: "Phone No"
+        nurse: "Nurse"
+        bank: "Bank"
+        bank_account_no: "Bank Account No."
+        bank_account_name: "Bank Account Name"
+    placeholders:
+      defaults:
+        username: 'Your username'
+        password: '****'
+        order_datetime: 'Time'
+        hours: 'Hours'
+        hospital: "Hospital"
+        location: "Location"
+        contact_person: "Contact Person"
+        contact_phone_no: "Phone No"
+        nurse: "Nurse"
+                
+  activerecord:
+    enums:
+      booking:
+        status:
+          Open:   "Open"
+          Matched: "Matched"
+          Completed: "Completed"
+          Cancelled: "Cancelled"
+          Rejected: "Rejected"
+          Pending: "Pending"
+          Expired: "Expired"
+          Confirmed: "Confirmed"
+        hospital:
+          嘉諾撒醫院: "Canossa Hospital"
+          播道醫院: "Evangel Hospital"
+          香港港安醫院: "HK Adventist Hospital"
+          浸信會醫院: "HK Baptist Hospital"
+          養和醫院: "HK Sanatorium & Hospital"
+          明德國際醫院: "Matilda Intl Hospital"
+          寶血醫院: "Precious Blood Hospital"
+          聖保祿醫院: "St. Paul's Hospital"
+          聖德肋撒醫院: "St. Teresa's Hospital"
+          荃灣港安醫院: "Tsuen Wan Adventist Hospital"
+          仁安醫院: "Union Hospital"
+        payment: 
+          Paid: "Paid"
+          Refunded: "Refunded"
+          NotPaid: "Not Paid"
+          PaidOut: "Paid Out"
+      user:
+        role:
+          customer: "Customer"
+          partner: "Partner"
+          admin: "Admin"
+          user: "User"
+          vip: "VIP"
+        bank:
+          匯豐銀行: "HSBC"
+          恒生銀行: "Hang Seng Bank"
+          渣打銀行: "Standard Chartered Bank"
+          中國銀行: "Bank of China"
+          美國銀行: "Bank of America"
+          中國建設銀行: "China Construction Bank"
+          花旗銀行: "Citi Bank"
+          星展銀行: "DBS Hong Kong"
+        qualification:
+          registered_nurse: "Registered Nurse"
+          enrolled_nurse: "Enrolled Nurse"
+        status:
+          Pending: "Pending"
+          Approved: "Approved"
+          Disapproved: "Disapproved"
+  
+  errors:
+    messages:
+      in_future: "The date should be in the future"
+  
+  datepicker:
+    dformat: '%Y/%m/%d'             # display format of the date (this is the default, can be ommited)
+    pformat: 'YYYY/MM/DD'           # picking format of the date (this is the default, can be ommited)
+  timepicker:
+    dformat: '%R'                   # display format of the time (this is the default, can be ommited)
+    pformat: 'HH:00'                # picking format of the time (this is the default, can be ommited)
+  dayViewHeaderFormat: 'MMMM YYYY'
+  
+  hospitals:
+    嘉諾撒醫院: "Canossa Hospital"
+    播道醫院: "Evangel Hospital"
+    香港港安醫院: "HK Adventist Hospital"
+    浸信會醫院: "HK Baptist Hospital"
+    養和醫院: "HK Sanatorium & Hospital"
+    明德國際醫院: "Matilda Intl Hospital"
+    寶血醫院: "Precious Blood Hospital"
+    聖保祿醫院: "St. Paul's Hospital"
+    聖德肋撒醫院: "St. Teresa's Hospital"
+    荃灣港安醫院: "Tsuen Wan Adventist Hospital"
+    仁安醫院: "Union Hospital"
+    
+  our_services: "Professional Business Partners"
+  our_services1: "You Deserve It"
+  our_services2: "To have peace of mind, let's us take good care of your beloved one."
+  services_scope: "Services"
+  services_2A: "Hospital Nursing"
+  services_2B: "Private Hospital Nursing Services"
+  services_3A: "Private Nursing"
+  services_3B: "Home Nursing Services"
+  services_1A: "Medical Escort"
+  services_1B: "Private Medical Escort Services"
+  promotion: "Promotion"
+  details: "Details"
+  address_1: "Rm C 2/F Capital Trade Centre"
+  address_2: "62 Tsun Yip St Kwun Tong KLN"
+  work_scope: "Scope of Services"
+  
+  FAQ: "FAQ"
+  FAQ_customer: "Customer Questions"
+  FAQ_partner: "Partner Questions"
+  FAQ_text: "Frequently asked questions"
+  
+  customer_FAQ_1Q: "What does LetsNurse do?"
+  customer_FAQ_1A: "LetsNurse helps your finding quality private professional nursing services 
+           in no time. Our rating system ensure only the quality professional nurses 
+           will be eligible to serve."  
+  customer_FAQ_2Q: "Who will provide the services?"
+  customer_FAQ_2A: "All services providers are qualified registered nurses in Hong Kong."
+  customer_FAQ_3Q: "What areas are covered by your services?"
+  customer_FAQ_3A: "Our services mainly in Hong Kong, including Hong Kong Island, Kowloon and New Territory."
+  customer_FAQ_4Q: "When should I make the booking?"
+  customer_FAQ_4A: "Please make your booking at least one day before the services."
+  customer_FAQ_5Q: "Any guarantee my booking will be matched?"
+  customer_FAQ_5A: "No, there is no gurantee that your bookings will be matched but we shall use our best effort to get it matched."  
+  customer_FAQ_6Q: "Do I have to pay when I make my booking?"
+  customer_FAQ_6A: "Yes, you pay when you book your services."
+  customer_FAQ_7Q: "How can I pay?"
+  customer_FAQ_7A: "You can pay with major credit cards."
+  customer_FAQ_8Q: "Is my credit card information safe?"
+  customer_FAQ_8A: "Yes, absolutely. You credit card information will be passed to a PCI-certified payment gateway directly which is certified to PCI Service Provider Level 1. We simply do NOT store your credit card information by any means."
+  customer_FAQ_9Q: "When shall I pay?"
+  customer_FAQ_9A: "You pay when you are happy with your matching and ready to confrim the booking. " 
+  customer_FAQ_10Q: "What is LetsNurse cancellation policy?"
+  customer_FAQ_10A: "Cancellations made twenty four (24) hours or more prior to the booking time, we refund 100% of your deposite.  Cancellations made four (4) to twenty four (24) hours prior to the booking time  will incur HK$ 300 charge. Cancellations made four (4) hours or less prior to the booking time will incur HK$ 500 charge."
+  customer_FAQ_11Q: "What is your privacy policy?"
+  customer_FAQ_11A: "We collect minimium information requested for the services and we will use it solely for this services. Access to your booking is strictly limited and no information will be revealed to other parties."
+  
+  partner_FAQ_1Q: "Who can be your partners?"
+  partner_FAQ_1A: "Only qualified registered nurse in Hong Kong can join us."  
+  partner_FAQ_2Q: "Any fee to join LetsNurse?"
+  partner_FAQ_2A: "It is alsolutely free to join."
+  partner_FAQ_3Q: "What need to be done before providing services?"
+  partner_FAQ_3A: "You need to sign up with your professional information, and you can take order after your application is approved."
+  partner_FAQ_4Q: "Why do you need my photo and my HKID copy?"
+  partner_FAQ_4A: "We need to verify your identity in the approval process. Further, your photo will be directed to clients with your bookings.  A nice portrait photo is desirable."
+  partner_FAQ_5Q: "How could I know if there is open booking?"
+  partner_FAQ_5A: "Once your application is approved, you will be informed available bookings by emails "  
+  partner_FAQ_6Q: "How could I take orders?"
+  partner_FAQ_6A: "Go to the booking listing via menu Booking, you can see all the available bookings."  
+  partner_FAQ_7Q: "What should I do after picking a booking?"
+  partner_FAQ_7A: "You should contact your clients via phone and/or whatsapp once you confirmed the order."
+  partner_FAQ_8Q: "Am I free to pick the bookings?"
+  partner_FAQ_8A: "You are free to pick your orders you want based on bookings' locations, time and durations"
+  partner_FAQ_9Q: "How do I get paid"
+  partner_FAQ_9A: "You will be paid weekly with accounting deadline at Sunday night, and payment will be wired to to bank account by next Wednesday." 
+  partner_FAQ_10Q: "What is the rating system?"
+  partner_FAQ_10A: "Your clients will rated your services from 1 to 5 stars. You may be forbidden from picking bookings if your score is too low. To avoid that, providing first class services is always the best strategy. "
+  
+  about_us: "About Us"
+  about_letsnurse: "About LetsNurse"
+  about_letsnurse_1: "LetsNurse is placement agent that sources qualified nursing services for our clients. To ensure the quality of our services, we only source Hong Kong experienced registered nurses."
+  about_letsnurse_2: "Our English and/or Cantonese speaking registered nurses are happy to provide first class nursing services in the place that you want, whether it is in hospital or in your home.  Should you need a long-term private nursing services arrangment, feel free to contact us."
+  about_letsnurse_3: "Our mission is to provide quality, private nursing services wherever and whenever you need it."
+  
+  job: "Our Practices"
+  job1: "Home Care"
+  job2: "Hospital Care"
+  job3: "Medical Escort"
+
+  terms: "Term & Conditions"
+  agreement: "Agreement"
+  legal_0A: "The terms and conditions stated herein (collectively, the “Agreement”) constitute a legal agreement between you and Letsapp Limited Limited, (a limited liability company incorporated under the laws of Hong Kong) and associated companies (the “Company”, “we or “us”). By using or receiving any services supplied to you by the Company (collectively, the “Service”), you hereby expressly acknowledge and agree to be bound by the terms and conditions of the Agreement."
+  legal_0B: "The Company reserves the right to modify the terms and conditions of this Agreement or its policies relating to the Service or the app at any time, effective upon posting of an updated version of this Agreement on the Service or Application. You are responsible for regularly reviewing this agreement. Continued use of the service and the app after such changes shall constitute your consent to such changes."
+  legal_0C: "The Company does not provide recruitment services, and the company is not an employment agency. It is up to the client (the third party) to offer employment which may be scheduled through use of our services. The company offers information and methods to obtain such third party employers, but does not intend to provide recruitment services or act in an y way as an employment agency, and has no responsibility or liability for any recuriment services provided to you by such third party."
+  legal_1: "Service Connects Service Providers and Clients"
+  legal_1A: "Our Service is a communications platform which enables the connection between Clients and Service Providers. Clients are individuals and/or businesses seeking to obtain nursing services ("Tasks") from Nurses ("Taskers") and are therefore clients of Taskers, and Taskers are individuals seeking to perform nursing service for Clients. Clients and Taskers together are hereinafter referred to as “Users.”"
+  legal_1B: "The service ONLY provide a Venue"
+  legal_1C: "The Service is a platform for enabling connections between Users for the fulfillment of Tasks, but Company is not responsible for the performance of Users, nor does it have control over the quality, timing, legality, failure to provide, or any other aspect whatsoever of Tasks Clients, nor of the integrity, responsibility or any of the actions or omissions whatsoever of any Users. Company does not have control over the quality, timing or legality of Tasks delivered by its Taskers. Company makes no representations about the suitability, reliability, timeliness, or accuracy of the Tasks requested and provided by Users identified through the Service whether in public, private, or offline interactions."
+  legal_2: "User Vetting"
+  legal_2A: "Clients and Taskers are subject to an extensive vetting process before they are approved to use the service and during their use of the Service, including but not limited to a verification of identity and professinal qualification and a comprehensive criminal check in Hong Kong. Users hereby give consent to Company to conduct background checks as often as required in compliance with laws within the governing jurisdiction."
+  legal_2B: "Although Company may perform background checks of Users, as outlined above, Company cannot confirm that each User is who they claim to be and therefore, Company cannot and does not assume any responsibility for the accuracy or reliability identity or background check information or any information provided through the Service."
+  legal_3: "Billing and Payment"
+  legal_3A: "Users of the Service contract for Tasks directly with other Users. Company will not be a party to any contracts for Tasks or services. Clients of the Service will be required to provide their credit card information to the Payment Service Provider (the “PSP”). Company will NOT retain your credit card information. Taskers are required to provide bank account details to Company for weekly payment."
+  legal_3B: "Clients will be responsible for paying each Task (the “Service”) provided by a Tasker (“Task Payment”). Clients may be charged a cancellation fee if you book a Task, but cancel it before it is completed, as set forth in the Task pricing terms. Company reserves the right, in its sole discretion (but not the obligation), to (i) place on hold any Task Payment and out of pocket expenses, or (ii) refund, provide credits or arrange for the PSP to do so."
+  legal_3C: "By using the Service, Client acknowledges that Taskers referred to Client under this agreement are referred in relation to any - short term, part-time, contract, consultative or any basis of employment - Tasks. Should Client decide to hire any Taskers introduced under the Terms of this agreement - on a part-time, contract, consultative or any basis of employment separate from this original permanent arrangement – Client will be liable to pay the relevant agency fee, as shown on the Platform."
+  legal_3D: "In the event Client offers other Tasks or employment - on any basis - within 3 months of Tasker introduction through Company, Client shall pay Company the relevant Service Fee. The Agreement is that Company’s Service Fee will apply to any Taskers, initiated, referred or listed by Company for a specific Task, or any alternate Tasks or employment opportunities (contracted or permanent) offered and employed by Client or a subsidiary, affiliate, or related company, within this timeframe, whether in the capacity of a Tasker or an employee. The introduction effected by Company to Client is confidential and is not for referral to any outside third party not legally associated with Client. Regardless of the length of the Task Duration, the calculation of the Conversion Fee from temporary to permanent is based on 5 X 8-hours services remuneration. Please note that any Tasker presented to, and placed in Client remains a Company Tasker from the date of introduction to Client."
+  legal_4: "Release"
+  legal_4A: "The Service is only a venue for connecting Users. Because Company is not involved in the actual contact between Users or in the completion of the Task, in the event that you have a dispute with one or more Users, you release Company (and our officers, directors, agents, investors, subsidiaries, and employees) from any and all claims, demands, or damages (actual or consequential) of every kind and nature, known and unknown, suspected and unsuspected, disclosed and undisclosed, arising out of or in any way connected with such disputes."
+  legal_4B: "Company expressly disclaims any liability that may arise between Users of its Service."
+  legal_5: "Account, Password and Security"
+  legal_5A: "You must register with Company and create an account to use the Service. You are the sole authorized user of your account. You are responsible for maintaining the confidentiality of any password and account number provided by you or Company for accessing the Service. You are solely and fully responsible for all activities that occur under your password or account. Company has no control over the use of any User’s account and expressly disclaims any liability derived therefrom. Should you suspect that any unauthorized party may be using your password or account or you suspect any other breach of security, you will contact Company immediately."
+  legal_5B: "By providing your mobile phone number and using the Service, you hereby affirmatively consent to our use of your mobile phone number for calls and texts in order to perform and improve upon the Service. Company will not assess any charges for calls or texts, but standard message charges or other charges from your wireless carrier may apply. You may opt-out of receiving text messages from us by modifying your account settings on the Site or Company’s mobile application."
+  legal_6: "User Classification and Withholdings"
+  legal_6A: "Each User assumes all liability for proper classification of such User’s workers as independent contractors or employees based on applicable legal guidelines. Users do not have authority to enter into written or oral — whether implied or express — contracts on behalf of Company. Each User acknowledges that Company does not, in any way, supervise, direct, or control a Tasker’s work or Tasks performed in any manner. Company does not set a Tasker’s work hours or location of work. Company will not provide any equipment, labor or materials needed for a particular Task."
+  legal_6B: "You agree to indemnify, hold harmless and defend Company from any and all claims that a Tasker was misclassified as an independent contractor, any liabilities arising from a determination by a court, arbitrator, government agency or other body that a Tasker was misclassified as an employee (including, but not limited to, taxes, penalties, interest and attorney’s fees), any claim that Company was an Tasker or joint Tasker of a Tasker, as well as claims under any employment-related laws, such as those relating to employment termination, employment discrimination, harassment or retaliation, as well as any claims for overtime pay, sick leave, holiday or vacation pay, retirement benefits, worker’s compensation benefits, unemployment benefits, or any other employee benefits."
+  legal_7: "Termination and Suspension"
+  legal_7A: "Without limitation, Company may terminate or suspend your right to use the Service if you breach any term of this Agreement (including the Marketplace Guidelines) or any policy of Company posted through the Service from time to time, or if Company otherwise finds that you have engaged in inappropriate and/or offensive behavior. If Company terminates or suspends your right to use the Service for any of these reasons, you will not be entitled to any refund of unused balance in your account. If Company terminates or suspends your account for any reason, you are prohibited from registering and creating a new account under your name, a fake or borrowed name, or the name of any third party, even if you may be acting on behalf of the third party. In addition to terminating or suspending your account, Company reserves the right to take appropriate legal action, including without limitation pursuing civil, criminal, and injunctive redress. Even after your right to use the Service is terminated or suspended, this Agreement will remain enforceable against you."
+  legal_7B: "You may terminate this Agreement at any time by ceasing all use of the Service. All sections which by their nature should survive the expiration or termination of this Agreement shall continue in full force and effect subsequent to and notwithstanding the expiration or termination of this Agreement."
+  legal_8: "Indemnification"
+  legal_8A: "you acknowledge and agree that company is only willing to provide the service if you agree to certain limitations of our liability to you and third parties. therefore, you agree not to hold company, its affiliates, its licensors, its clients in promotions, sweepstakes or contests, or any of such parties’ agents, employees, officers, directors, corporate clients, or participants liable for any damage, suits, claims, and/or controversies (collectively, “liabilities”) that have arisen or may arise, whether known or unknown, relating to your or any other party’s use of or inability to use the service, including without limitation any liabilities arising in connection with the conduct, act or omission of any user (including without limitation stalking, harassment that is sexual or otherwise, acts of physical violence, and destruction of personal property), any dispute with any user, any instruction, advice, act, or service provided by company or its affiliates or licensors and any destruction of your information."
+  legal_8B: "under no circumstances will company, its affiliates, its licensors, or any of such parties’ agents, employees, officers, directors, corporate clients, or participants be liable for any direct, indirect, incidental, consequential, special or exemplary damages arising in connection with your use of or inability to use the services, even if advised of the possibility of the same. some states do not allow the exclusion or limitation of incidental or consequential damages, so the above limitations may not apply to you."
+  legal_9: ""
+  legal_decalre_0: "Except as expressly provided otherwise, this Agreement is exclusively governed by, and will be construed under, the laws of the Hong Kong SAR, without regard to choice of law principles. Any arbitration necessary will be conducted in Hong Kong and be subject to Hong Kong laws too."
+  legal_declare_1: "I hereby acknowledge that i have read and understand the foregoing terms of service, privacy policy and marketplace guidelines and agree that my use of the service is an acknowledgment of my agreement to be bound by the terms and conditions of this agreement."
+  legal_declare_2: "In the event of any conflict between the English and other language versions, the English version shall prevail."

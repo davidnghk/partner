@@ -1,0 +1,25 @@
+<div >
+<%= render 'content' %>
+
+<!--Booking Record Info-->
+  
+
+  <% if current_user.customer? %>
+  <% if @booking.Open? or @booking.Matched? or @booking.Confirmed? %>
+      <span><%= link_to t('cancel'), cancel_booking_path(@booking), method: :put, class: "btn btn-success"  %>  </span>
+      <span><%= link_to t('edit'), edit_booking_path(@booking), class: "btn btn-success"  %>  </span> 
+    <% end %>
+  <% elsif current_user.partner? %>
+      <% if @booking.Open? %>
+  <span><%= link_to t('engage'), engage_booking_path(@booking), method: :put, class: "btn btn-success"  %> </span>
+      <% elsif @booking.Matched? %>
+  <span><%= link_to t('disengage'), disengage_booking_path(@booking), method: :put, class: "btn btn-success"  %>  </span> 
+      <% end %>
+  <% elsif current_user.admin? %>
+    <% if @booking.Open? or @booking.Matched?%>
+      <span><%= link_to t('cancel'), cancel_booking_path(@booking), method: :put, class: "btn btn-success"  %>  </span>
+      <span><%= link_to t('reject'), reject_booking_path(@booking), method: :put, class: "btn btn-success"  %>  </span>
+  <span><%= link_to t('expire'), expire_booking_path(@booking), method: :put, class: "btn btn-success"  %>  </span>
+    <% end %>
+  <% end %>
+  

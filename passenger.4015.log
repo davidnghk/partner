@@ -1,0 +1,42 @@
+[ 2016-07-10 21:35:53.7806 56208/7f7884cab780 age/Wat/WatchdogMain.cpp:1291 ]: Starting Passenger watchdog...
+[ 2016-07-10 21:35:53.8080 56211/7f99c583f780 age/Cor/CoreMain.cpp:982 ]: Starting Passenger core...
+[ 2016-07-10 21:35:53.8082 56211/7f99c583f780 age/Cor/CoreMain.cpp:235 ]: Passenger core running in multi-application mode.
+[ 2016-07-10 21:35:53.8106 56211/7f99c583f780 age/Cor/CoreMain.cpp:732 ]: Passenger core online, PID 56211
+[ 2016-07-10 21:35:53.8423 56220/7f7f633b6780 age/Ust/UstRouterMain.cpp:529 ]: Starting Passenger UstRouter...
+[ 2016-07-10 21:35:53.8431 56220/7f7f633b6780 age/Ust/UstRouterMain.cpp:342 ]: Passenger UstRouter online, PID 56220
+App 56272 stdout: 
+App 56272 stderr: W, [2016-07-10T21:35:58.615217 #56272]  WARN -- : Booking: overriding method 'Open?'!
+App 56272 stderr: W, [2016-07-10T21:35:58.615497 #56272]  WARN -- : Booking: overriding method 'Rejected?'!
+App 56272 stderr: W, [2016-07-10T21:35:58.615687 #56272]  WARN -- : Booking: overriding method 'Cancelled?'!
+App 56272 stderr: W, [2016-07-10T21:35:58.615917 #56272]  WARN -- : Booking: overriding method 'Matched?'!
+App 56272 stderr: W, [2016-07-10T21:35:58.616129 #56272]  WARN -- : Booking: overriding method 'Completed?'!
+App 56272 stderr: W, [2016-07-10T21:35:58.616309 #56272]  WARN -- : Booking: overriding method 'Expired?'!
+App 56272 stderr: W, [2016-07-10T21:35:58.616428 #56272]  WARN -- : Booking: overriding method 'Confirmed?'!
+App 56272 stderr: W, [2016-07-10T21:35:58.616980 #56272]  WARN -- : Booking: overriding method 'NotPaid?'!
+App 56272 stderr: W, [2016-07-10T21:35:58.617137 #56272]  WARN -- : Booking: overriding method 'Refunded?'!
+App 56272 stderr: W, [2016-07-10T21:35:58.617307 #56272]  WARN -- : Booking: overriding method 'NotPaid?'!
+App 56272 stderr: W, [2016-07-10T21:35:58.617465 #56272]  WARN -- : Booking: overriding method 'Paid?'!
+App 56294 stdout: 
+
+[ 2016-07-10 21:43:37.2149 56220/7f7f57fff700 age/Ust/UstRouterMain.cpp:422 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+
+[ 2016-07-10 21:43:37.2150 56220/7f7f633b6780 age/Ust/UstRouterMain.cpp:492 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ 2016-07-10 21:43:37.2150 56211/7f99bec3b700 age/Cor/CoreMain.cpp:532 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ 2016-07-10 21:43:37.2150 56220/7f7f577fe700 Ser/Server.h:817 ]: [UstRouterApiServer] Freed 0 spare client objects
+[ 2016-07-10 21:43:37.2151 56220/7f7f577fe700 Ser/Server.h:464 ]: [UstRouterApiServer] Shutdown finished
+[ 2016-07-10 21:43:37.2151 56211/7f99c583f780 age/Cor/CoreMain.cpp:901 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ 2016-07-10 21:43:37.2152 56220/7f7f57fff700 Ser/Server.h:464 ]: [UstRouter] Shutdown finished
+[ 2016-07-10 21:43:37.2152 56211/7f99c583f780 age/Cor/CoreMain.cpp:819 ]: Checking whether to disconnect long-running connections for process 56294, application /var/www/nurse/partner/public (production)
+[ 2016-07-10 21:43:37.2156 56211/7f99be3b9700 Ser/Server.h:817 ]: [ServerThr.2] Freed 128 spare client objects
+[ 2016-07-10 21:43:37.2156 56211/7f99be3b9700 Ser/Server.h:464 ]: [ServerThr.2] Shutdown finished
+[ 2016-07-10 21:43:37.2157 56211/7f99bdb37700 Ser/Server.h:817 ]: [ServerThr.3] Freed 128 spare client objects
+[ 2016-07-10 21:43:37.2157 56211/7f99bdb37700 Ser/Server.h:464 ]: [ServerThr.3] Shutdown finished
+[ 2016-07-10 21:43:37.2158 56211/7f99bec3b700 Ser/Server.h:817 ]: [ServerThr.1] Freed 128 spare client objects
+[ 2016-07-10 21:43:37.2158 56211/7f99bec3b700 Ser/Server.h:464 ]: [ServerThr.1] Shutdown finished
+[ 2016-07-10 21:43:37.2160 56211/7f99bd2b5700 Ser/Server.h:817 ]: [ServerThr.4] Freed 128 spare client objects
+[ 2016-07-10 21:43:37.2161 56211/7f99bd2b5700 Ser/Server.h:464 ]: [ServerThr.4] Shutdown finished
+[ 2016-07-10 21:43:37.2163 56211/7f99bca33700 Ser/Server.h:817 ]: [ApiServer] Freed 0 spare client objects
+[ 2016-07-10 21:43:37.2163 56211/7f99bca33700 Ser/Server.h:464 ]: [ApiServer] Shutdown finished
+[ 2016-07-10 21:43:37.2164 56220/7f7f633b6780 age/Ust/UstRouterMain.cpp:523 ]: Passenger UstRouter shutdown finished
+[ 2016-07-10 21:43:37.2165 56211/7f99c583f780 age/Cor/CoreMain.cpp:819 ]: Checking whether to disconnect long-running connections for process 56294, application /var/www/nurse/partner/public (production)
+[ 2016-07-10 21:43:37.4836 56211/7f99c583f780 age/Cor/CoreMain.cpp:967 ]: Passenger core shutdown finished

@@ -1,0 +1,117 @@
+<div class="authform">
+<!--  <h3>Edit <%= resource_name.to_s.humanize %></h3>-->
+  <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put, :role => 'form'}) do |f| %>
+    <%= devise_error_messages! %>
+    <div class="form-group">
+      <%= f.label :name %>
+      <%= f.text_field :name, :autofocus => true, class: 'form-control' %>
+    </div>
+    <div class="form-group">
+      <%= f.label :email %>
+      <%= f.email_field :email, class: 'form-control' %>
+      <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+        <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+      <% end %>
+    </div>
+    <div class="form-group">
+      <%= f.label :phone_no %>
+      <%= f.text_field :phone_no, class: 'form-control' %>
+    </div>
+  
+  <% if current_user.partner? %>
+
+        <div class="form-group">
+          <%= f.label :image %>
+          <% if @user.image.exists? %>
+          <%#= image_tag @user.image, size: "200x200", class: "img-responsive img-thumbnail img-circle" %>
+          <%= image_tag @user.image.url(:thumb), class: "img-responsive img-thumbnail img-circle" %>
+            <P></P>
+          <% end %>
+            <%= f.file_field :image, class: 'form-control' %>
+        </div>
+  
+        <div class="form-group">
+          <%= f.label :hkid_image %>
+          <% if @user.hkid_image.exists? %>
+            <%#= image_tag @user.hkid_image %>
+          <%= image_tag @user.hkid_image.url(:large) %>
+          <% end %>
+          <%= f.file_field :hkid_image, class: 'form-control' %>
+        </div>
+  
+    <fieldset>
+        <div class="form-group">
+          <%= f.label :registration_no %>
+          <%= f.text_field :registration_no, class: 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= f.label :registration_chinese_name %>
+          <%= f.text_field :registration_chinese_name, class: 'form-control' %>
+        </div>    
+        <div class="form-group">
+          <%= f.label :registration_english_name %>
+          <%= f.text_field :registration_english_name, class: 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= f.label :registration_expiry_date %>
+          <%= f.date_field :registration_expiry_date, class: 'form-control' %>
+        </div>
+      </fieldset>
+    
+        <div class="form-group">
+          <%= f.label :certificate_image %>
+          <% if @user.certificate_image.exists? %>
+            <%#= image_tag @user.certificate_image %>
+          <%= image_tag @user.certificate_image.url(:large) %>
+          <% end %>
+          <%= f.file_field :certificate_image, class: 'form-control' %>
+        </div>
+  
+      <fieldset>
+        <div class="form-group">
+          <%= f.label :bank %>
+          <%= f.select :bank, User.banks.keys.to_a, class: 'form-control'  %>
+          <%#= f.select :bank, collection: User.i18n_banks.keys.to_a, class: 'form-control' %>
+          <%#= f.input :bank, collection: User.i18n_banks %>
+        </div>
+        <div class="form-group">
+          <%= f.label :bank_account_no %>
+          <%= f.text_field :bank_account_no, class: 'form-control' %>
+        </div>    
+        <div class="form-group">
+          <%= f.label :bank_account_name %>
+          <%= f.text_field :bank_account_name, class: 'form-control' %>
+        </div>
+
+    </fieldset>
+  
+  <% end %> 
+  
+  
+    <fieldset>
+      <p><%= t("fill_to_change_password") %></p>
+      <div class="form-group">
+        <%= f.label :password %>
+        <%= f.password_field :password, :autocomplete => 'off', class: 'form-control' %>
+      </div>
+      <div class="form-group">
+        <%= f.label :password_confirmation %>
+        <%= f.password_field :password_confirmation, class: 'form-control' %>
+      </div>
+    </fieldset>
+    <fieldset>
+      <p><%= t("password_to_change") %></p>
+      <div class="form-group">
+        <%= f.label :current_password %>
+        <%= f.password_field :current_password, class: 'form-control' %>
+      </div>
+    </fieldset>
+    <%= f.submit 'Update', :class => 'button right' %>
+  <% end %>
+</div>
+<!--
+<div class="authform">
+<h3>Cancel Account</h3>
+<p>Unhappy? We'll be sad to see you go.</p>
+<%= button_to "Cancel my account", registration_path(resource_name), :data => { :confirm => "Are you sure?" }, :method => :delete, :class => 'button right' %>
+</div>-->

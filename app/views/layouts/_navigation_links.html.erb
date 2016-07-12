@@ -1,0 +1,11 @@
+<% if user_signed_in? %>
+    <li><%= link_to t('booking_list'), bookings_path %></li>
+<% else %>
+    <li><%= link_to t('about'), page_path('about') %></li>
+    <li><%= link_to t('FAQ'), partner_faq_path %></li>
+<% end %>   
+<% if I18n.locale == :zh  %>
+    <li><%= link_to 'English', url_for( :locale => 'en' ) %></li>      
+<% else %>
+    <li><%= link_to '中文', url_for( :locale => 'zh' ) %></li>
+<% end %>   
