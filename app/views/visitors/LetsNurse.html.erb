@@ -46,6 +46,8 @@
             <div class="col-lg-12 text-center">
               <h2><%= t("our_services1") %></h2>
                 <p class="lead"><%= t("our_services2") %></a></p>
+              <%= link_to t('about'), page_path('about'), class: "btn btn-warning btn-lg" %>
+              <%= link_to t('FAQ'), partner_faq_path, class: "btn btn-warning btn-lg" %>
             </div>
         </div>
         <!-- /.row -->
@@ -76,7 +78,7 @@
                             <% if user_signed_in? %>
                                 <%= link_to t('details'), bookings_path, class: "btn btn-warning btn-lg" %>
                             <% else %>
-                                <%= link_to t("details"), new_user_session_path, class: "btn btn-warning btn-lg" %>
+                                <%= link_to t("partner_up"), new_user_registration_path(:role => :partner), class: "btn btn-warning btn-lg" %>
                             <% end %>
                         </div>
                     </div>
@@ -93,7 +95,7 @@
                             <% if user_signed_in? %>
                                 <%= link_to t('details'), bookings_path, class: "btn btn-warning btn-lg" %>
                             <% else %>
-                                <%= link_to t("details"), new_user_session_path, class: "btn btn-warning btn-lg" %>
+                                <%= link_to t("partner_up"), new_user_registration_path(:role => :partner), class: "btn btn-warning btn-lg" %>
                             <% end %>
                         </div>
                     </div>
@@ -110,7 +112,7 @@
                             <% if user_signed_in? %>
                                 <%= link_to t('details'), bookings_path, class: "btn btn-warning btn-lg" %>
                             <% else %>
-                                <%= link_to t("details"), new_user_session_path, class: "btn btn-warning btn-lg" %>
+                                <%= link_to t("partner_up"), new_user_registration_path(:role => :partner), class: "btn btn-warning btn-lg" %>
                             <% end %>
                         </div>
                     </div>

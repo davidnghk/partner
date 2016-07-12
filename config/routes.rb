@@ -18,8 +18,7 @@ Rails.application.routes.draw do
      root to: 'visitors#LetsNurse'
      get "customer_faq" => "visitors#faq"
      get "partner_faq"  => "visitors#faq2"
-     get "customer_legal" => "visitors#customer_legal"
-     get "partner_legal"  => "visitors#partner_legal"
+     get "legal" => "visitors#legal"
      devise_for :users
      resources :users
      resources :orders

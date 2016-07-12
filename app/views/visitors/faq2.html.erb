@@ -28,7 +28,7 @@
                     </div>
                     <div id="collapseOne" class="panel-collapse collapse">
                         <div class="panel-body">
-                          <%= t("partner_FAQ_1A") %>
+                          <%= t("partner_FAQ_1A") %> <%= link_to t("terms"), legal_path %>
                         </div>
                     </div>
                 </div>
@@ -146,6 +146,19 @@
                     <div id="collapseTen" class="panel-collapse collapse">
                         <div class="panel-body">
                            <%= t("partner_FAQ_10A") %>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.panel -->
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse11"><%= t("partner_FAQ_11Q") %></a>
+                        </h4>
+                    </div>
+                    <div id="collapse11" class="panel-collapse collapse">
+                        <div class="panel-body">
+                           <%= t("partner_FAQ_11A") %>
                         </div>
                     </div>
                 </div>
